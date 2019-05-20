@@ -3,7 +3,7 @@ import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
 import { Todos } from '../todos.model';
-// import { placeholderService } from '../services/placeholderService';
+
 
 @Component({
   selector: 'app-home',
@@ -13,12 +13,12 @@ import { Todos } from '../todos.model';
 export class HomePage implements OnInit {
   todos$: Todos[];
   text = 'Default starting text';
-  constructor(private placeholderService: placeholderService) {
+  constructor(private phS: placeholderService) {
 
   }
 
   ngOnInit() {
-    return this.placeholderService.getData()
+    return this.phS.getData()
       .subscribe(data => {
         console.log('the data coming back', data);
         this.todos$ = data;

@@ -1,19 +1,20 @@
 import { HttpClient } from '@angular/common/http';
-import { Injectable } from "@angular/core";
+import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { Todos } from '../todos.model';
-import { map } from 'rxjs/operators'
+import { map } from 'rxjs/operators';
+import { Component, OnInit } from '@angular/core';
 
-// export enum SearchType {
-//   all = '',
-//   title = 'title'
-
-// }
+// @Component({
+//   selector: 'app-todos',
+//   templateUrl: 'home.page.html',
+//   styleUrls: ['home.page.scss'],
+// })
 
 @Injectable({
   providedIn: 'root'
 })
-export class placeholderService
+ export class placeholderService 
 {
   constructor(private http: HttpClient) { }
 
@@ -21,8 +22,8 @@ export class placeholderService
     return this.http.get<Todos[]>('https://jsonplaceholder.typicode.com/todos')
     .pipe(
       map(results => {
-        console.log('RAW: ', results);
-        return results['title'];
+        console.log('RAW:' , results[0].title);
+        return results[0].title;
       })
     );
   } 
