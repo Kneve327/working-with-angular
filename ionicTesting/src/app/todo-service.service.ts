@@ -1,13 +1,23 @@
-import { Injectable } from '@angular/core';
-import {HttpClient} from '@angular/common/http';
+// import { Component } from '@angular/core';
+// import { IonicPage, NavController, NavParams } from 'ionic-angular';
+// import { Observable } from 'rxjs/Observable';
+// import { Injectable } from '@angular/core';
+// import { HttpClient } from '@angular/common/http';
 
-@Injectable({
-  providedIn: 'root'
-})
-export class TodoServiceService {
+// @Injectable({
+//   providedIn: 'root'
+// })
+// export class TodoServiceService {
+//   todos: Observable<any>;
 
-  constructor(private http: HttpClient) { }
-}
+//   constructor(public httpClient: HttpClient) {
+//     this.todos = this.httpClient.get('https://jsonplaceholder.typicode.com/todos');
+//     this.todos
+//     .subscribe(data => {
+//       console.log('my-data', data);
+//     });
+//    }
+// }
 
 
 // *********************************************************

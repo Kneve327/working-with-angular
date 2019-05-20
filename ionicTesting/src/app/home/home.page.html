@@ -1,15 +1,43 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>To Do</ion-title>
+    <ion-title class="ionic-text-center">To Do</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-  <div class="ion-padding">
-    <p> {{ text }} </p>
-    <ion-button (click)="onChangeText()">Change Text</ion-button>
+  <div class="ion-margin-horizontal">
+    <!-- <p> {{ text }} </p>
+    <ion-button (click)="onChangeText()">Change Text</ion-button> -->
 
     <ion-list>
+      <ion-item>
+        <ion-label>{{todos$}}</ion-label>
+        <ion-checkbox slot="start" (click)="todoToggle()"></ion-checkbox>
+      </ion-item>
+      <ion-item>
+        <ion-label>Checkbox</ion-label>
+        <ion-checkbox slot="start" (click)="todoToggle()"></ion-checkbox>
+      </ion-item>
+      <ion-item>
+        <ion-label>Checkbox</ion-label>
+        <ion-checkbox slot="start" (click)="todoToggle()"></ion-checkbox>
+      </ion-item>
+      <ion-item>
+        <ion-label>Checkbox</ion-label>
+        <ion-checkbox slot="start" (click)="todoToggle()"></ion-checkbox>
+      </ion-item>
+      <ion-item>
+        <ion-label>Checkbox</ion-label>
+        <ion-checkbox slot="start" (click)="todoToggle()"></ion-checkbox>
+      </ion-item>
+      <ion-item>
+        <ion-label>Checkbox</ion-label>
+        <ion-checkbox slot="start" (click)="todoToggle()"></ion-checkbox>
+      </ion-item>
+      <ion-item>
+        <ion-label>Checkbox</ion-label>
+        <ion-checkbox slot="start" (click)="todoToggle()"></ion-checkbox>
+      </ion-item>
       <ion-item>
         <ion-label>Checkbox</ion-label>
         <ion-checkbox slot="start" (click)="todoToggle()"></ion-checkbox>
@@ -23,14 +51,6 @@
         <ion-checkbox slot="start" (click)="todoToggle()"></ion-checkbox>
       </ion-item>
     </ion-list>
-
-    <ion-row>
-      <ion-col size="6" size-md offset="3">
-        ion-col [size="6"]
-      </ion-col>
-
-    </ion-row>
-
 
   </div>
 </ion-content>

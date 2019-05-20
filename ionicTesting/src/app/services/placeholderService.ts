@@ -1,13 +1,29 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from "@angular/core";
 import { Observable } from 'rxjs';
-import { User } from '../users.model';
+import { Todos } from '../todos.model';
+import { map } from 'rxjs/operators'
 
-@Injectable()
+// export enum SearchType {
+//   all = '',
+//   title = 'title'
+
+// }
+
+@Injectable({
+  providedIn: 'root'
+})
 export class placeholderService
 {
-  constructor(private _http: HttpClient) { }
+  constructor(private http: HttpClient) { }
+
   getData(): Observable<any> {
-    return this._http.get<User[]>('https://jsonplaceholder.typicode.com/users');
+    return this.http.get<Todos[]>('https://jsonplaceholder.typicode.com/todos')
+    .pipe(
+      map(results => {
+        console.log('RAW: ', results);
+        return results['title'];
+      })
+    );
   } 
 }
